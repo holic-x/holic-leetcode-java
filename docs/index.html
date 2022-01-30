@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '文档标题', // 文档标题，会显示在侧边栏顶部
+      repo: 'https://github.com/holic-x/xxxx',  // 右上角github仓库配置
+      themeColor: '#3F51B5', // 主题色配置
+
+      maxLevel: 4,// 默认情况下会抓取文档中所有标题并渲染成目录，可指定生成目录的最大层级
+      loadNavbar: 'framework/_navbar.md', // 默认加载 _navbar.md,作为顶部导航栏(在同级目录下构建_navbar.md),可自定义指定md文件路径 xxx.md
+      loadSidebar: 'framework/_sidebar.md', // 默认加载 _sidebar.md，作为侧边栏(在同级目录下构建_sidebar.md),可自定义指定md文件路径 xxx.md
+      subMaxLevel: 5, // 自定义侧边栏后默认不会再生成目录，可通过设置生成目录的最大层级开启这个功能，可指定生成目录的最大层级
+
+      // mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
+
+      coverpage: 'framework/_coverpage.md', // 封面配置
+
+      // 配置路由别名
+      alias: {
+          // 配置navbar、sidebar路由别名，用于biu面多级目录构建引用404问题
+          '/.*/_navbar.md': '/framework/_navbar.md',
+          '/.*/_sidebar.md': '/framework/_sidebar.md'
+      },
+
+      // realtivePath: true, // 启动相对路径配置
+
+      // 搜索功能构建
+      search: {
+        paths: 'auto',
+        placeholder: '输入关键字进行搜索',
+        noData: '未找到结果',
+        depth: 5,
+      },
+
+      // 字数统计
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+
+      // TABS选项卡
+      tabs: {
+        persist: true,      // default
+        sync: true,      // default
+        theme: 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+
+      // /** 其余配置 **/
+      // // formatUpdated: '{MM}/{DD} {HH}:{mm}', // 通过 {docsify-updated} 变量显示文档更新日期,配置formatUpdated设定日期格式
+      // // externalLinkTarget: '_self', // default: '_blank' 外部链接打开方式
+      // // cornerExternalLinkTarget: '_self', // default: '_blank'
+
+      // 分页导航组件引入
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+
+      // 开发插件配置
+      plugins: [
+        function (hook, vm) {
+          // 构建页面fotter
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="https://github.com/holic-x">holic-x</a> &copy;2021.</span>',
+            '<span>Sot the lot of you.I do what I like.</span>',
+            '</footer>'
+          ].join('');
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+          
+          hook.beforeEach(function (html) {
+            var url =
+              'https://github.com/holic-x/java-base-docs/master/docs/' + vm.route.file;
+            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n';
+            return (
+              editHtml +
+              html +
+              '\n----\n' +
+              'Last modified {docsify-updated} ' +
+              editHtml
+            );
+          });
+        }
+      ]
+
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- 引入搜素插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!-- 引入一键复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <!-- 代码高亮：引入其他语言扩展 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-shell-session.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-http.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
+
+  <!--  引入图片缩放  -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- 引入字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+  <!-- 引入docsify-tabs构建选项卡 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+  <!-- 引入分页导航插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+</body>
+
+<style>
+  /* :root {
+    --docsifytabs-border-color: #ededed;
+    --docsifytabs-tab-highlight-color: purple;
+  } */
+</style>
+
+</html>
