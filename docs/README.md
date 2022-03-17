@@ -22,6 +22,14 @@ Depix：https://github.com/beurtschipper/Depix
 
 
 
+## BUG集散地
+
+> 简介说明
+
+ 平平无奇BUG集散地，收录日常开发遇到的问题和相应的解决方案，便于复盘和个人知识点整合
+
+
+
 
 
 
