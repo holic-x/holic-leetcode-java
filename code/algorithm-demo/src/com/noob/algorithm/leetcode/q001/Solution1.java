@@ -2,6 +2,7 @@ package com.noob.algorithm.leetcode.q001;
 
 /**
  * 🟢 1.两数之和
+ * https://leetcode.cn/problems/two-sum/description/
  */
 public class Solution1 {
 

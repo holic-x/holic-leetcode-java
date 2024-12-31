@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 /**
  * 🟢 1.两数之和
+ * https://leetcode.cn/problems/two-sum/description/
  */
 public class Solution2 {
 
