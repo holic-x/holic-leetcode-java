@@ -1,4 +1,6 @@
-package com.noob.algorithm.leetcode.q02;
+package com.noob.algorithm.leetcode.q002;
+
+import com.noob.algorithm.base.dataStructure.tree.ListNode;
 
 /**
  * 2-两数相加

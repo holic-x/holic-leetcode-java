@@ -1,4 +1,6 @@
-package com.noob.algorithm.leetcode.q02;
+package com.noob.algorithm.leetcode.q002;
+
+import com.noob.algorithm.base.dataStructure.tree.ListNode;
 
 /**
  * 2-两数相加
@@ -26,7 +28,7 @@ public class Solution1 {
         // 循环遍历两个链表
         while (l1 != null && l2 != null) {
             // 获取对应节点值之和，然后将存入新链表(每个节点只能存一位数字，直接对10取模)
-            cur.next = new ListNode((l1.val + l2.val)%10);
+            cur.next = new ListNode((l1.val + l2.val) % 10);
             // 指针后移
             cur = cur.next;
             l1 = l1.next;
@@ -34,10 +36,10 @@ public class Solution1 {
         }
 
         // 判断是否有剩余节点，直接进行追加
-        if(l1 != null) {
+        if (l1 != null) {
             cur.next = l1;
         }
-        if(l2 != null) {
+        if (l2 != null) {
             cur.next = l2;
         }
 
@@ -47,21 +49,3 @@ public class Solution1 {
 }
 
 
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
