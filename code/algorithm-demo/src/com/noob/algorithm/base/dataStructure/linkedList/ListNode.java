@@ -1,4 +1,4 @@
-package com.noob.algorithm.base.dataStructure.tree;
+package com.noob.algorithm.base.dataStructure.linkedList;
 
 /**
  * 链表节点定义

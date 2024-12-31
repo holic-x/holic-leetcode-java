@@ -1,51 +1,43 @@
 package com.noob.algorithm.leetcode.q002;
 
-import com.noob.algorithm.base.dataStructure.tree.ListNode;
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+import com.sun.source.tree.Tree;
 
 /**
- * 2-两数相加
- * 思路：错误思路（此处并不是将每个链表对应位置数字相加然后放入链表节点，实际上应该要将链表组成的数字相加，然后再放在一个新链表中，链表中每个节点存一个数字）
- * 错误实现
+ * 🟡 2-两数相加（超出内存限制）
+ * https://leetcode.cn/problems/add-two-numbers/
+ * 思路：将链表组成的数字相加，然后再放在一个新链表中，链表中每个节点存一个数字）
  */
 public class Solution1 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-
         // 定义链表
-        ListNode res = new ListNode(0);
-
+        ListNode dummy = new ListNode(0);
         // 定义链表指针
-        ListNode cur = res;
+        ListNode cur = dummy;
 
-        // 边界值处理（l1为null，或者l2为null）
-        if (l1 == null) {
-            return l2;
-        }
-        if (l2 == null) {
-            return l1;
-        }
-
-        // 循环遍历两个链表
-        while (l1 != null && l2 != null) {
-            // 获取对应节点值之和，然后将存入新链表(每个节点只能存一位数字，直接对10取模)
-            cur.next = new ListNode((l1.val + l2.val) % 10);
-            // 指针后移
-            cur = cur.next;
+        // 分别遍历链表，组合数字(数字是逆序存放的)
+        StringBuffer sb1 = new StringBuffer();
+        while (l1 != null) {
+            sb1.append(l1.val);
             l1 = l1.next;
+        }
+        StringBuffer sb2 = new StringBuffer();
+        while (l2 != null) {
+            sb2.append(l2.val);
             l2 = l2.next;
         }
+        // 计算数字之和
+        long sum = Long.valueOf(sb1.reverse().toString()) + Long.valueOf(sb2.reverse().toString()); // handle NumberFormatException 需注意大数处理
 
-        // 判断是否有剩余节点，直接进行追加
-        if (l1 != null) {
-            cur.next = l1;
-        }
-        if (l2 != null) {
-            cur.next = l2;
+        // 将构建好的数字加入新链表(逆序存放)
+        StringBuffer sumStr = new StringBuffer(String.valueOf(sum)).reverse();
+        for (int i = 0; i < sumStr.length(); i++) {
+            cur.next = new ListNode(sumStr.charAt(i) - '0'); // 将char类型转化为int
+            cur = cur.next;
         }
 
-        // 返回链表结果
-        return res.next;
+        // 返回链表
+        return dummy.next;
     }
 }
-
-
