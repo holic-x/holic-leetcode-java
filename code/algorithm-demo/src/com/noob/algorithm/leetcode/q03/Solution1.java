@@ -3,15 +3,13 @@ package com.noob.algorithm.leetcode.q03;
 import java.util.HashSet;
 
 /**
- * 无重复最长子串
+ * 003 无重复最长子串
  * 思路1：暴力拆解法
  */
 public class Solution1 {
 
     /**
      * 核心思路：循环遍历字符串，每次选定一个字符和子串进行比较，记录最长子串值
-     * @param s
-     * @return
      */
     public int lengthOfLongestSubstring(String s) {
         // 定义结果
@@ -47,25 +45,4 @@ public class Solution1 {
         return false;
     }
 
-
-    public static void main(String[] args) {
-        Solution1 solution = new Solution1();
-        String s1 = "abcabcbb";
-        System.out.println(solution.lengthOfLongestSubstring(s1));
-
-        String s2 = "bbbbbb";
-        System.out.println(solution.lengthOfLongestSubstring(s2));
-
-        String s3 = "pwwkew";
-        System.out.println(solution.lengthOfLongestSubstring(s3));
-
-        String s4 = "  ";
-        System.out.println(solution.lengthOfLongestSubstring(s4));
-
-        String s5 = "";
-        System.out.println(solution.lengthOfLongestSubstring(s5));
-
-        String s6 = " ";
-        System.out.println(solution.lengthOfLongestSubstring(s6));
-    }
 }
