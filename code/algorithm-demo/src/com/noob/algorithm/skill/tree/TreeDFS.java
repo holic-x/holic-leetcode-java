@@ -1,9 +1,7 @@
-package com.noob.algorithm.base.tree;
+package com.noob.algorithm.skill.tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * 深度优先遍历（前序、中序、后序）

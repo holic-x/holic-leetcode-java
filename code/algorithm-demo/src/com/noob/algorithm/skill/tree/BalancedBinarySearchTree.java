@@ -1,5 +1,5 @@
 
-package com.noob.algorithm.base.tree;
+package com.noob.algorithm.skill.tree;
 
 
 /**

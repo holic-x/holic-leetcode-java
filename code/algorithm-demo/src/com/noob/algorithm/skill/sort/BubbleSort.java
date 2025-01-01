@@ -1,4 +1,4 @@
-package com.noob.algorithm.sort;
+package com.noob.algorithm.skill.sort;
 
 import java.util.Arrays;
 

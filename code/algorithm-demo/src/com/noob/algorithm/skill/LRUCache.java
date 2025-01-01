@@ -1,8 +1,6 @@
-package com.noob.algorithm.test01;
+package com.noob.algorithm.skill;
 
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.Map;
 import java.util.Set;
 
 /**

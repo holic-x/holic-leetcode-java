@@ -1,4 +1,6 @@
-package com.noob.algorithm.listnode;
+package com.noob.algorithm.other;
+
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 /**
  * 移除链表
@@ -8,6 +10,7 @@ public class RemoveListNodeDemo {
 
     /**
      * 基于原链表直接进行操作
+     *
      * @param head
      * @param val
      * @return
@@ -15,7 +18,7 @@ public class RemoveListNodeDemo {
     public ListNode removeListNode1(ListNode head, int val) {
 
         // 头节点判断（此处用while是考虑到可能每次移除的都是头节点）
-        while(head!=null && head.val==val) {
+        while (head != null && head.val == val) {
             head = head.next; // 移除头节点
         }
 
@@ -40,6 +43,7 @@ public class RemoveListNodeDemo {
 
     /**
      * 增设虚拟头节点操作
+     *
      * @param head
      * @param val
      * @return
@@ -47,7 +51,7 @@ public class RemoveListNodeDemo {
     public ListNode removeListNode2(ListNode head, int val) {
 
         // 增设虚拟头节点
-        ListNode dummy = new ListNode(0,head);
+        ListNode dummy = new ListNode(0, head);
 
         // 定义链表指针
         ListNode cur = dummy;
@@ -58,7 +62,7 @@ public class RemoveListNodeDemo {
             if (cur.next.val == val) {
                 // 执行删除操作
                 cur.next = cur.next.next;
-            }else{
+            } else {
                 // 指针后移
                 cur = cur.next;
             }
@@ -67,7 +71,6 @@ public class RemoveListNodeDemo {
         // 返回链表
         return dummy.next;
     }
-
 
 
     public static void main(String[] args) {
