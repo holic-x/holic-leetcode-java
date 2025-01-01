@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q09;
+package com.noob.algorithm.leetcode.q230;
 
 
 import com.noob.algorithm.leetcode.structure.TreeNode;
@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 09.二叉搜索树中第K小的元素
+ * 🟡 230.二叉搜索树中第K小的元素
+ * https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/
  */
 public class Solution1 {
 
