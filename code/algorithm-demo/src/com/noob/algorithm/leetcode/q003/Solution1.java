@@ -1,9 +1,10 @@
-package com.noob.algorithm.leetcode.q03;
+package com.noob.algorithm.leetcode.q003;
 
 import java.util.HashSet;
 
 /**
- * 003 无重复最长子串
+ * 🟡 003 无重复最长子串
+ * https://leetcode.cn/problems/longest-substring-without-repeating-characters/
  * 思路1：暴力拆解法
  */
 public class Solution1 {

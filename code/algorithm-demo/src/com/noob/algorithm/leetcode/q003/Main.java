@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q03;
+package com.noob.algorithm.leetcode.q003;
 
 public class Main {
 
