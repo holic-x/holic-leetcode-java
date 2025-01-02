@@ -3,7 +3,7 @@ package com.noob.algorithm.base.template;
 public class Main {
 
     // 初始化测试用例
-    public void initCase(){
+    public static void initCase(){
 
     }
 
