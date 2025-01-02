@@ -1,7 +1,9 @@
-package com.noob.algorithm.leetcode.q19;
+package com.noob.algorithm.leetcode.q019;
+
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 /**
- * 2-删除倒数第N个节点（链表）
+ * 🟡019-删除倒数第N个节点（链表） - https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
  * 思路1：两次链表遍历，第1次获取链表长度，第2次在对应L-n+1做删除操作（即让当前节点的next指向下下个节点）
  * 需要注意的是，不需要设定为将节点加入新链表，主要是定位到那个要删除的节点的前一个节点prev，然后设置`prev.next=prev.next.next`
  */
@@ -29,26 +31,5 @@ public class Solution1 {
         // 当前指针移动向下下个节点（表示删除下个节点）
         cur.next = cur.next.next;
         return res.next;
-    }
-}
-
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }
