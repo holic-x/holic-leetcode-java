@@ -1,11 +1,11 @@
-package com.noob.algorithm.leetcode.q31;
+package com.noob.algorithm.leetcode.q031;
 
 import java.util.Arrays;
 
 /**
- * 31.下一个排列
+ * 🟡 31.下一个排列 - https://leetcode.cn/problems/next-permutation/
  */
-public class Solution {
+public class Solution1 {
 
     public void nextPermutation(int[] nums) {
 
@@ -43,17 +43,6 @@ public class Solution {
             // 不存在下一个更大的序列，需重排为最小序列
             Arrays.sort(nums);
         }
-    }
-
-    public static void main(String[] args) {
-//        int[] nums = {1,2,3};
-//        int[] nums = {1};
-        int[] nums = {2, 3, 1};
-//        int[] nums = {1, 3, 2};
-        System.out.println("原始数组" + Arrays.toString(nums));
-        Solution solution = new Solution();
-        solution.nextPermutation(nums);
-        System.out.println("下一个序列：" + Arrays.toString(nums));
     }
 
 }
