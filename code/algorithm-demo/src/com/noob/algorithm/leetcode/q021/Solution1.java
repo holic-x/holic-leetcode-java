@@ -1,9 +1,9 @@
-package com.noob.algorithm.leetcode.q21;
+package com.noob.algorithm.leetcode.q021;
 
-import java.util.HashSet;
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 /**
- * 21-合并链表
+ * 🟢 21-合并链表 - https://leetcode.cn/problems/merge-two-sorted-lists/description/
  */
 public class Solution1 {
 
@@ -50,23 +50,3 @@ public class Solution1 {
 
 }
 
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
