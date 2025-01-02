@@ -45,25 +45,4 @@ public class Solution1 {
         }
         return false;
     }
-
-    public static void main(String[] args) {
-        Solution1 solution = new Solution1();
-        String s1 = "abcabcbb";
-        System.out.println(solution.lengthOfLongestSubstring(s1));
-
-        String s2 = "bbbbbb";
-        System.out.println(solution.lengthOfLongestSubstring(s2));
-
-        String s3 = "pwwkew";
-        System.out.println(solution.lengthOfLongestSubstring(s3));
-
-        String s4 = "  ";
-        System.out.println(solution.lengthOfLongestSubstring(s4));
-
-        String s5 = "";
-        System.out.println(solution.lengthOfLongestSubstring(s5));
-
-        String s6 = " ";
-        System.out.println(solution.lengthOfLongestSubstring(s6));
-    }
 }

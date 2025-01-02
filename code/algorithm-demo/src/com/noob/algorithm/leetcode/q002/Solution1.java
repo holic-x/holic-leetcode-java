@@ -1,7 +1,6 @@
 package com.noob.algorithm.leetcode.q002;
 
 import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
-import com.sun.source.tree.Tree;
 
 /**
  * 🟡 2-两数相加（超出内存限制）
