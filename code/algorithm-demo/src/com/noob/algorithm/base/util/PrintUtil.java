@@ -3,10 +3,11 @@ package com.noob.algorithm.base.util;
 import java.util.List;
 
 /**
- * 数组打印工具类
+ * 集合相关打印工具类
  */
 public class PrintUtil {
 
+    // 数组打印
     public static void print(int[] dp) {
         for (int i = 0; i < dp.length; i++) {
             System.out.print("[" + dp[i] + "]" + "-");
@@ -14,6 +15,15 @@ public class PrintUtil {
         System.out.println();
     }
 
+    // 列表打印
+    public static void print(List<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print("[" + list.get(i) + "]" + "-");
+        }
+        System.out.println();
+    }
+
+    // 二维数组打印
     public static void printMatrix(int[][] dp) {
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
@@ -25,8 +35,6 @@ public class PrintUtil {
 
     /**
      * 图打印（邻接矩阵输出）
-     *
-     * @param graph
      */
     public static void printGraphMatrix(int[][] graph) {
         for (int i = 0; i < graph.length; i++) {
@@ -41,8 +49,6 @@ public class PrintUtil {
 
     /**
      * 图打印（邻接表输出）
-     *
-     * @param graph
      */
     public static void printGraphTable(List<List<Integer>> graph) {
         for (int i = 0; i < graph.size(); i++) {

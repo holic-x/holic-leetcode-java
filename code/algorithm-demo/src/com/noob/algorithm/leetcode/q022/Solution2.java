@@ -1,10 +1,10 @@
-package com.noob.algorithm.leetcode.q22;
+package com.noob.algorithm.leetcode.q022;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 22.括号生成
+ * 🟡 22.括号生成 - https://leetcode.cn/problems/generate-parentheses/
  * 思路：回溯法
  */
 public class Solution2 {
@@ -13,7 +13,7 @@ public class Solution2 {
     private List<String> res = new ArrayList<String>();
 
     public List<String> generateParenthesis(int n) {
-        backtrack(0,0,n,new StringBuilder());
+        backtrack(0, 0, n, new StringBuilder());
         return res;
     }
 
