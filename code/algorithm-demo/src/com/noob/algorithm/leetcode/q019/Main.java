@@ -3,50 +3,54 @@ package com.noob.algorithm.leetcode.q019;
 import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 import com.noob.algorithm.base.util.LinkedListUtil;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 public class Main {
 
-    public static void testSolution1() {
-        int[] nums1 = new int[]{1, 2, 3, 4, 5};
-        int[] nums2 = new int[]{1};
-        int[] nums3 = new int[]{1, 2};
+    // 初始化测试用例
+    public static List<int[]> initCase() {
+        List<int[]> caseList = new ArrayList<>();
+        caseList.add(new int[]{1, 2, 3, 4, 5});
+        caseList.add(new int[]{1});
+        caseList.add(new int[]{1, 2});
+        return caseList;
+    }
 
+    public static void testSolution1(List<int[]> caseList, List<Integer> nList) {
         Solution1 solution1 = new Solution1();
-        ListNode head1 = LinkedListUtil.createLink(nums1);
-        ListNode head2 = LinkedListUtil.createLink(nums2);
-        ListNode head3 = LinkedListUtil.createLink(nums3);
-
-        ListNode res21 = solution1.removeNthFromEnd(head1, 2);
-        ListNode res22 = solution1.removeNthFromEnd(head2, 1);
-        ListNode res23 = solution1.removeNthFromEnd(head3, 1);
-        LinkedListUtil.printLink(res21);
-        LinkedListUtil.printLink(res22);
-        LinkedListUtil.printLink(res23);
-
+        for (int i = 0; i < caseList.size(); i++) {
+            ListNode head = LinkedListUtil.createLink(caseList.get(i)); // 构建链表
+            ListNode res = solution1.removeNthFromEnd(head, nList.get(i)); // 调用算法
+            LinkedListUtil.printLink(res); // 打印执行结果
+        }
     }
 
 
-    public static void testSolution2() {
-
-        int[] nums1 = new int[]{1, 2, 3, 4, 5};
-        int[] nums2 = new int[]{1};
-        int[] nums3 = new int[]{1, 2};
-
-        Solution2 solution2 = new Solution2();
-        ListNode head1 = LinkedListUtil.createLink(nums1);
-        ListNode head2 = LinkedListUtil.createLink(nums2);
-        ListNode head3 = LinkedListUtil.createLink(nums3);
-
-        ListNode res21 = solution2.removeNthFromEnd(head1, 2);
-        ListNode res22 = solution2.removeNthFromEnd(head2, 1);
-        ListNode res23 = solution2.removeNthFromEnd(head3, 1);
-        LinkedListUtil.printLink(res21);
-        LinkedListUtil.printLink(res22);
-        LinkedListUtil.printLink(res23);
-
+    public static void testSolution2(List<int[]> caseList, List<Integer> nList) {
+        Solution2 solution = new Solution2();
+        for (int i = 0; i < caseList.size(); i++) {
+            ListNode head = LinkedListUtil.createLink(caseList.get(i)); // 构建链表
+            ListNode res = solution.removeNthFromEnd(head, nList.get(i)); // 调用算法
+            LinkedListUtil.printLink(res); // 打印执行结果
+        }
     }
 
-    public void testSolution01() {
+    public static void main(String[] args) {
+        List<int[]> caseList = initCase();
+        List<Integer> nList = Arrays.stream(new int[]{2, 1, 1}).boxed().collect(Collectors.toList());
+
+        testSolution1(caseList, nList);
+
+        System.out.println("----------------------------------------------");
+
+        testSolution2(caseList, nList);
+    }
+
+    public void testSolutionDefault() {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
@@ -57,16 +61,6 @@ public class Main {
             System.out.println(result.val);
             result = result.next; // 指针后移
         }
-    }
-
-
-    public static void main(String[] args) {
-
-        testSolution1();
-
-        System.out.println("----------------------------------------------");
-
-        testSolution2();
     }
 
 }
