@@ -6,7 +6,7 @@ import com.noob.algorithm.base.util.LinkedListUtil;
 
 public class Main {
 
-    public static void testCase1() {
+    public static void testSolution1() {
         int[] nums1 = new int[]{1, 2, 3, 4, 5};
         int[] nums2 = new int[]{1};
         int[] nums3 = new int[]{1, 2};
@@ -26,7 +26,7 @@ public class Main {
     }
 
 
-    public static void testCase2() {
+    public static void testSolution2() {
 
         int[] nums1 = new int[]{1, 2, 3, 4, 5};
         int[] nums2 = new int[]{1};
@@ -46,7 +46,7 @@ public class Main {
 
     }
 
-    public void testCase01() {
+    public void testSolution01() {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
@@ -62,11 +62,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        testCase1();
+        testSolution1();
 
         System.out.println("----------------------------------------------");
 
-        testCase2();
+        testSolution2();
     }
 
 }

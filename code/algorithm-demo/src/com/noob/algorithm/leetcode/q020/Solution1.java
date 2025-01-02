@@ -1,18 +1,17 @@
-package com.noob.algorithm.leetcode.q20;
+package com.noob.algorithm.leetcode.q020;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
 /**
- * 20.有效的括号
+ * 🟢 20.有效的括号 - https://leetcode.cn/problems/valid-parentheses/
  * 思路：栈（存储匹配的左括号，左括号压栈）
  */
-public class Solution {
-
+public class Solution1 {
 
     // 思路：替换法
-    public boolean isValid02(String s) {
+    public boolean isValid(String s) {
         /**
          * 既然括号不能嵌套出现，那么只需要依次去除成对的括号，看最终是否剩余元素
          * 由于并不知道哪些括号包含其他括号，因此每次去除都直接覆盖所有情况，去掉成对的括号，然后校验剩余的括号是否可以组成成对的括号进行移除

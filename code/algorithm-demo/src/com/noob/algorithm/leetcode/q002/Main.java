@@ -30,6 +30,7 @@ public class Main {
         LinkedListUtil.printLink(res1);
 
         System.out.println("------------------------------------------");
+
         Solution2 solution2 = new Solution2();
         ListNode res2 = solution2.addTwoNumbers(head1,head2);
         LinkedListUtil.printLink(res2);
