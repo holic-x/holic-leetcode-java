@@ -1,5 +1,7 @@
 package com.noob.algorithm.base.util;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,6 +23,23 @@ public class PrintUtil {
             System.out.print("[" + list.get(i) + "]" + "-");
         }
         System.out.println();
+    }
+
+    // 列表打印
+    public static void printMatrix(List<List<Integer>> list) {
+        List<String> res = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            StringBuffer buffer = new StringBuffer();
+            List<Integer> curList = list.get(i);
+            for (int j = 0; j < curList.size(); j++) {
+                buffer.append(curList.get(j));
+                if (j != curList.size() - 1) {
+                    buffer.append(",");
+                }
+            }
+            res.add(buffer.toString());
+        }
+        System.out.println(String.join(" || ", res));
     }
 
     // 二维数组打印

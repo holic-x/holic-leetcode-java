@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q39;
+package com.noob.algorithm.leetcode.q039;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 39.组合总和
  */
-public class Solution {
+public class Solution1 {
 
     private List<List<Integer>> ans = new ArrayList<>();
     private List path = new ArrayList<>();
