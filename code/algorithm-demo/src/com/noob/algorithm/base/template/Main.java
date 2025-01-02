@@ -4,7 +4,7 @@ package com.noob.algorithm.base.template;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main01 {
+public class Main {
 
     // 初始化测试用例
     public static List<int[]> initCase() {
