@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 🟡017.电话号码的字母组合(https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/)
+ * 🟡017.电话号码的字母组合 - https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/
  * 思路：回溯法
  */
 public class Solution1 {

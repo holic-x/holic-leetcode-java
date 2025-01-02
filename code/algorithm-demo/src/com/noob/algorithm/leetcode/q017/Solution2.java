@@ -3,7 +3,7 @@ package com.noob.algorithm.leetcode.q017;
 import java.util.*;
 
 /**
- * 🟡 017.电话号码的字母组合(https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/)
+ * 🟡 017.电话号码的字母组合 - https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/
  * 思路：队列法
  */
 public class Solution2 {
