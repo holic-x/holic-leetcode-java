@@ -1,9 +1,9 @@
-package com.noob.algorithm.leetcode.q24;
+package com.noob.algorithm.leetcode.q024;
 
-import java.util.HashSet;
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 /**
- * 24-两两交换链表中的节点
+ * 🟡 24-两两交换链表中的节点 - https://leetcode.cn/problems/swap-nodes-in-pairs/description/
  * 在不修改节点值的情况下进行操作
  */
 public class Solution1 {
@@ -31,25 +31,4 @@ public class Solution1 {
         return dummy.next;
     }
 
-}
-
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }
