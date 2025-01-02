@@ -1,9 +1,9 @@
-package com.noob.algorithm.leetcode.q17;
+package com.noob.algorithm.leetcode.q017;
 
 import java.util.*;
 
 /**
- * 17.电话号码的字母组合
+ * 🟡 017.电话号码的字母组合(https://leetcode.cn/problems/letter-combinations-of-a-phone-number/description/)
  * 思路：队列法
  */
 public class Solution2 {
@@ -22,7 +22,7 @@ public class Solution2 {
 
     public List<String> letterCombinations(String digits) {
         // 如果digits为空直接返回空字符串
-        if(digits == null || digits.length() == 0){
+        if (digits == null || digits.length() == 0) {
             return new ArrayList<>();
         }
 
@@ -38,7 +38,7 @@ public class Solution2 {
             for (int j = 0; j < resSize; j++) {
                 String s = res.remove(0); // 取出队首元素，然后依次和对应的字母序列进行拼接并将产生的结果入队
                 for (int k = 0; k < letters.length(); k++) {
-                    res.add(s+letters.charAt(k));
+                    res.add(s + letters.charAt(k));
                 }
             }
         }
