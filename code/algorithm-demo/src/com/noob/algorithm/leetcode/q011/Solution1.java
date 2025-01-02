@@ -1,8 +1,7 @@
 package com.noob.algorithm.leetcode.q011;
 
 /**
- * 🟡 011 盛最多水的容器（双指针）
- * https://leetcode.cn/problems/container-with-most-water/description/
+ * 🟡 011 盛最多水的容器（双指针） - https://leetcode.cn/problems/container-with-most-water/description/
  */
 public class Solution1 {
 

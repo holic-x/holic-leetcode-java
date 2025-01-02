@@ -5,8 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 🟡 015 三数之和
- * https://leetcode.cn/problems/3sum/description/
+ * 🟡 015 三数之和 - https://leetcode.cn/problems/3sum/description/
  */
 public class Solution2 {
 
