@@ -12,6 +12,7 @@ public class Solution2 {
 
     /**
      * 核心：双指针思路，找出符合条件的三元组（固定一位，双指针移动寻找匹配元素组合）
+     * 算法优化：剪枝、去重处理
      */
     public List<List<Integer>> threeSum(int[] nums) {
         // 定义结果集
@@ -54,8 +55,6 @@ public class Solution2 {
                     // 向左移动q指针，让q变小，让sum趋于0
                     q--;
                 }
-
-
             }
         }
         return result;
