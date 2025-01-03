@@ -1,11 +1,11 @@
-package com.noob.algorithm.leetcode.q49;
+package com.noob.algorithm.leetcode.q049;
 
 import java.util.*;
 
 /**
  * 49.字母异位词分组统计
  */
-public class Solution {
+public class Solution1 {
     public List<List<String>> groupAnagrams(String[] strs) {
         // 定义结果集（存储排序后的字母异位词，和对应的分组）
         Map<String,List<String>> map = new HashMap<>();

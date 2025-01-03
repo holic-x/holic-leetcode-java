@@ -1,10 +1,10 @@
-package com.noob.algorithm.leetcode.q48;
+package com.noob.algorithm.leetcode.q048;
 
 /**
  * 48 旋转图像
  * todo
  */
-public class Solution {
+public class Solution1 {
 
     public void rotate(int[][] matrix) {
 
