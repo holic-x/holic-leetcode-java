@@ -1,13 +1,12 @@
-package com.noob.algorithm.leetcode.q46;
+package com.noob.algorithm.leetcode.q046;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * 46.全排列
  */
-public class Solution {
+public class Solution1 {
 
     // 定义返回结果
     List<List<Integer>> res = new ArrayList<List<Integer>>();
