@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Main {
 
-    // todo 
+    // todo
     // 参数集合列表（case列表下标一一对照）
     static List<int[]> param1List = new ArrayList<>();
     static List<Integer> param2List = new ArrayList<>();
@@ -38,17 +38,20 @@ public class Main {
     }
 
     public static void testSolution1(List<int[]> param1List, List<Integer> param2List) {
-        Solution1 solution = new Solution1();
         for (int i = 0; i < param1List.size(); i++) {
+            Solution1 solution = new Solution1(); // 注意对象引用问题
             List<List<Integer>> res = solution.combinationSum(param1List.get(i), param2List.get(i));
             PrintUtil.printMatrix(res);
         }
-
     }
 
 
     public static void testSolution2(List<int[]> param1List, List<Integer> param2List) {
-
+        for (int i = 0; i < param1List.size(); i++) {
+            Solution2 solution = new Solution2(); // 注意对象引用问题
+            List<List<Integer>> res = solution.combinationSum(param1List.get(i), param2List.get(i));
+            PrintUtil.printMatrix(res);
+        }
     }
 
 

@@ -28,8 +28,11 @@ public class PrintUtil {
     // 列表打印
     public static void printMatrix(List<List<Integer>> list) {
         List<String> res = new ArrayList<>();
+        if (list.isEmpty()) {
+            System.out.println("[]");
+        }
         for (int i = 0; i < list.size(); i++) {
-            StringBuffer buffer = new StringBuffer();
+            StringBuffer buffer = new StringBuffer().append("[");
             List<Integer> curList = list.get(i);
             for (int j = 0; j < curList.size(); j++) {
                 buffer.append(curList.get(j));
@@ -37,6 +40,7 @@ public class PrintUtil {
                     buffer.append(",");
                 }
             }
+            buffer.append("]");
             res.add(buffer.toString());
         }
         System.out.println(String.join(" || ", res));
