@@ -1,6 +1,7 @@
 package com.noob.algorithm.leetcode.q049;
 
 
+import com.noob.algorithm.base.util.PrintListUtil;
 import com.noob.algorithm.base.util.PrintUtil;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class Main {
         List<String[]> caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
-        caseList.add(new String[]{""});
+        caseList.add(new String[]{"abc", "cbb", "acb"});
 
         return caseList;
     }
@@ -23,7 +24,9 @@ public class Main {
         for (String[] strs : caseList) {
             Solution1 solution = new Solution1();
             List<List<String>> res = solution.groupAnagrams(strs);
-            // PrintUtil.printMatrix(res);
+            // 打印数据
+            PrintListUtil<String> printListUtil = new PrintListUtil<>();
+            printListUtil.printMatrix(res);
         }
 
     }

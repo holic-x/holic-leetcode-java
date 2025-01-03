@@ -1,6 +1,9 @@
 package com.noob.algorithm.base.template;
 
 
+import com.noob.algorithm.base.util.PrintListUtil;
+import com.noob.algorithm.base.util.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +23,9 @@ public class Main {
 
         for (int[] nums : caseList) {
 
+            // 打印数据
+            PrintListUtil<String> printListUtil = new PrintListUtil<>();
+            // printListUtil.printMatrix(res);
         }
 
     }
