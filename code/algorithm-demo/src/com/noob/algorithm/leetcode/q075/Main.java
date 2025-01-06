@@ -1,7 +1,6 @@
-package com.noob.algorithm.base.template;
+package com.noob.algorithm.leetcode.q075;
 
 
-import com.noob.algorithm.base.util.PrintListUtil;
 import com.noob.algorithm.base.util.PrintUtil;
 
 import java.util.ArrayList;
@@ -14,7 +13,8 @@ public class Main {
         List<int[]> caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
-        caseList.add(new int[]{1, 2, 3});
+        caseList.add(new int[]{2,0,2,1,1,0});
+        caseList.add(new int[]{2,0,1});
 
         return caseList;
     }
@@ -22,14 +22,12 @@ public class Main {
     public static void testSolution1(List<int[]> caseList) {
 
         for (int[] nums : caseList) {
-            // ① 调用算法
-
-
-            // ② 打印数据
-            PrintListUtil<String> printListUtil = new PrintListUtil<>();
-            // printListUtil.printMatrix(res);
+            Solution1 solution = new Solution1();
+            solution.sortColors(nums);
+            // 打印数据
+            PrintUtil printUtil = new PrintUtil();
+            printUtil.print(nums);
             System.out.println("********************");
-
         }
 
     }
@@ -37,11 +35,19 @@ public class Main {
 
     public static void testSolution2(List<int[]> caseList) {
 
+        for (int[] nums : caseList) {
+            Solution1 solution = new Solution1();
+            solution.sortColors(nums);
+            // 打印数据
+            PrintUtil printUtil = new PrintUtil();
+            printUtil.print(nums);
+            System.out.println("********************");
+        }
+
     }
 
 
     public static void main(String[] args) {
-
         // 参数初始化
         List<int[]> caseList = initCase();
 
@@ -52,6 +58,7 @@ public class Main {
         System.out.println("---------- 算法②调用测试 ----------");
 
         testSolution2(caseList);
+
 
     }
 }

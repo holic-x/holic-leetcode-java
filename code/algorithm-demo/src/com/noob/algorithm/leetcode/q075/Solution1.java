@@ -1,13 +1,16 @@
-package com.noob.algorithm.leetcode.q75;
+package com.noob.algorithm.leetcode.q075;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 颜色分类
+ * 🟡 075 颜色分类 - https://leetcode.cn/problems/sort-colors/description/
  */
 public class Solution1 {
 
+    /**
+     * 思路：分类法（将每个小球存储到指定的分类集合，随后重新载入nums）
+     */
     public void sortColors(int[] nums) {
         List<Integer> red = new ArrayList<Integer>();
         List<Integer> white = new ArrayList<Integer>();
