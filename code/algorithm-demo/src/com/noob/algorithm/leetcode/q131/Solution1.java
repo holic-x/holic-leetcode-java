@@ -1,13 +1,12 @@
 package com.noob.algorithm.leetcode.q131;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * 131.分割回文串
  */
-public class Solution {
+public class Solution1 {
 
     // 定义结果集
     List<List<String>> res = new ArrayList<List<String>>();
@@ -48,7 +47,7 @@ public class Solution {
     }
 
     // 双指针校验回文：校验效率较高（参考整体响应8ms）
-    public boolean isHuiWen1(String str) {
+    private boolean isHuiWen1(String str) {
         // 通过双指针来校验回文，指针相遇则说明满足回文
         int start = 0;
         int end = str.length() - 1;
@@ -64,7 +63,7 @@ public class Solution {
     }
 
     // 字符串反转校验回文，校验效率较低（参考整体响应16ms）
-    public boolean isHuiWen(String str) {
+    private boolean isHuiWen(String str) {
         // 通过字符串反转来校验回文
         String reverseStr = new StringBuilder(str).reverse().toString();
         return str.equals(reverseStr);
