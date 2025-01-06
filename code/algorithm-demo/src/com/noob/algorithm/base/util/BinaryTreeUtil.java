@@ -2,9 +2,7 @@ package com.noob.algorithm.base.util;
 
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
@@ -66,7 +64,7 @@ public class BinaryTreeUtil {
     }
 
     /**
-     * 递归构建树
+     * 递归构建树（完全二叉树的节点构建） todo 需进一步确认是否适配不同的二叉树测试用例构建
      */
     private static TreeNode createBinaryTreeHelper(Integer[] nums, int idx) {
         if (idx >= nums.length) {
@@ -91,41 +89,14 @@ public class BinaryTreeUtil {
     }
 
 
-    /**
-     * 基于层序遍历打印节点
-     */
-    public void printTreeByBfs(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-
-        List<Integer> res = new ArrayList<>();
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            res.add(node.val);
-            if (node.left != null) {
-                queue.offer(node.left);
-            }
-            if (node.right != null) {
-                queue.offer(node.right);
-            }
-        }
-
-        PrintListUtil<Integer> printListUtil = new PrintListUtil<>();
-        printListUtil.print(res);
-    }
-
     public static void main(String[] args) {
         BinaryTreeUtil binaryTreeUtil = new BinaryTreeUtil();
         TreeNode root1 = binaryTreeUtil.createBinaryTree(new Integer[]{1, null, 2, 3});
-        binaryTreeUtil.printTreeByBfs(root1);
+        PrintTreeUtil.printTreeByBfs(root1);
 
         // 递归构建树
         TreeNode root2 = binaryTreeUtil.createBinaryTreeByDfs(new Integer[]{1, null, 2, 3});
-        binaryTreeUtil.printTreeByBfs(root2);
+        PrintTreeUtil.printTreeByBfs(root2);
 
     }
 

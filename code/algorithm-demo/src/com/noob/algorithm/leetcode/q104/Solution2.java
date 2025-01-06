@@ -20,7 +20,7 @@ public class Solution2
     /**
      * 思路：深度优先遍历思路（递归）
      */
-    public int maxDepthDFS(TreeNode root) {
+    private int maxDepthDFS(TreeNode root) {
         // 递归访问到空节点的时候退出
         if(root == null) {
             return 0;

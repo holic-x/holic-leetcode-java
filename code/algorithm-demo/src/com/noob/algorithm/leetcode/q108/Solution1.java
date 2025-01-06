@@ -6,7 +6,7 @@ import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 import java.util.*;
 
 /**
- * 108.将有序数组转化为二叉搜索树
+ * 🟢 108.将有序数组转化为二叉搜索树 - https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/
  */
 public class Solution1 {
 
@@ -14,7 +14,7 @@ public class Solution1 {
     public TreeNode sortedArrayToBST(int[] nums) {
 
         // 判断传入的nums长度是否为0，如果为0则不需要构建
-        if(nums == null || nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             return null;
         }
 
@@ -22,8 +22,8 @@ public class Solution1 {
         int mid = nums.length / 2;
         // 创建根节点进行存储
         TreeNode root = new TreeNode(nums[mid]);
-        root.left = sortedArrayToBST(Arrays.copyOfRange(nums,0,mid)); // 将数组左边的元素作为左节点
-        root.right = sortedArrayToBST(Arrays.copyOfRange(nums,mid+1,nums.length)); // 将数组右边的元素作为右节点
+        root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, mid)); // 将数组左边的元素作为左节点
+        root.right = sortedArrayToBST(Arrays.copyOfRange(nums, mid + 1, nums.length)); // 将数组右边的元素作为右节点
         // 返回root
         return root;
     }
