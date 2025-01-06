@@ -3,9 +3,9 @@ package com.noob.algorithm.leetcode.q128;
 import java.util.*;
 
 /**
- * 128.最长连续序列
+ * 🟡 128.最长连续序列 - https://leetcode.cn/problems/longest-consecutive-sequence/description/
  */
-public class Solution {
+public class Solution1 {
     public int longestConsecutive(int[] nums) {
         // 判断nums是否为空
         if(nums==null || nums.length==0){
@@ -33,14 +33,6 @@ public class Solution {
             }
         }
         return maxLength;
-    }
-
-    public static void main(String[] args) {
-//        int[] nums = {1,2,3,4,5,6,7,8,9};
-
-        // [9,1,4,7,3,-1,0,5,8,-1,6]
-        int[] nums = {9,1,4,7,3,-1,0,5,8,-1,6};
-        System.out.println(new Solution().longestConsecutive(nums));
     }
 
 }
