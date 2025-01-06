@@ -1,11 +1,9 @@
 package com.noob.algorithm.leetcode.q152;
 
-import java.util.Arrays;
-
 /**
- * 152.乘积最大子数组
+ * 🟡 152.乘积最大子数组 - https://leetcode.cn/problems/maximum-product-subarray/description/
  */
-public class Solution {
+public class Solution1 {
 
     public int maxProduct(int[] nums) {
         // 1.定义dp（dp[k]表示以nums[k]结尾的子数组的最大乘积）
@@ -29,4 +27,6 @@ public class Solution {
         }
         return max;
     }
+
+
 }
