@@ -1,8 +1,4 @@
-package com.noob.algorithm.base.template;
-
-import com.noob.algorithm.leetcode.q031.Solution1;
-
-import java.util.Arrays;
+package com.noob.algorithm.base.template.test;
 
 public class MainTemplate {
 

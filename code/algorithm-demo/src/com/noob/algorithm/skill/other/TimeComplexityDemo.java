@@ -1,4 +1,4 @@
-package com.noob.algorithm.other;
+package com.noob.algorithm.skill.other;
 
 /**
  * 时间复杂度测试样例

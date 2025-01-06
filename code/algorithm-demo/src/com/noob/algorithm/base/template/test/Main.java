@@ -1,8 +1,7 @@
-package com.noob.algorithm.base.template;
+package com.noob.algorithm.base.template.test;
 
 
 import com.noob.algorithm.base.util.PrintListUtil;
-import com.noob.algorithm.base.util.PrintUtil;
 
 import java.util.ArrayList;
 import java.util.List;

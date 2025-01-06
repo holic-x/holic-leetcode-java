@@ -1,4 +1,4 @@
-package com.noob.algorithm.other;
+package com.noob.algorithm.skill.other;
 
 /**
  * 循环 示例

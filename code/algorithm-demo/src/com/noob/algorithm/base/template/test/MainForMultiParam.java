@@ -1,4 +1,4 @@
-package com.noob.algorithm.base.template;
+package com.noob.algorithm.base.template.test;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.noob.algorithm.other;
+package com.noob.algorithm.skill.other;
 
 import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 

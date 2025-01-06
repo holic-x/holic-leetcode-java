@@ -1,4 +1,4 @@
-package com.noob.algorithm.other;
+package com.noob.algorithm.skill.other;
 
 /**
  * 斐波那契数列算法
