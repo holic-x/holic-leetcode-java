@@ -1,14 +1,16 @@
-package com.noob.algorithm.leetcode.q78;
+package com.noob.algorithm.leetcode.q078;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 78.子集
+ * 🟡 78.子集 - https://leetcode.cn/problems/subsets/description/
  */
-public class Solution {
+public class Solution1 {
 
-    // 核心：循环遍历数组元素，每遍历一个数字，就基于当前子集追加当前数字构成新的子集，进而进入下一个数字遍历，以此类推直到所有的数字遍历完成
+    /**
+     * 核心：循环遍历数组元素，每遍历一个数字，就基于当前子集追加当前数字构成新的子集，进而进入下一个数字遍历，以此类推直到所有的数字遍历完成
+     */
     public List<List<Integer>> subsets(int[] nums) {
         // 定义结果集合
         List<List<Integer>> res = new ArrayList<List<Integer>>();
