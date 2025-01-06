@@ -9,8 +9,7 @@ import java.util.*;
 /**
  * 94.二叉树的中序遍历(迭代法)
  */
-public class Solution2
-{
+public class Solution2 {
     public List<Integer> inorderTraversal(TreeNode root){
         List<Integer> res = new ArrayList<Integer>();
         Deque<TreeNode> stk = new LinkedList<TreeNode>();

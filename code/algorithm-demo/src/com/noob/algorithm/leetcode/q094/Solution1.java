@@ -23,7 +23,6 @@ public class Solution1
         List<Integer> list = new ArrayList<Integer>();
         list = inorderHelper(root,list);
         return list;
-
     }
 
     /**

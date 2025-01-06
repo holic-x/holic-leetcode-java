@@ -2,7 +2,9 @@ package com.noob.algorithm.base.util;
 
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -11,10 +13,7 @@ import java.util.Queue;
 public class BinaryTreeUtil {
 
     /**
-     * 根据限定的一维数组构建树（如果叶子结点为空则用null占位）
-     *
-     * @param nums
-     * @return
+     * 根据限定的一维数组构建树（如果叶子结点为空则用null占位） todo null 待完善
      */
     public static TreeNode createBinaryTree(Integer[] nums) {
         int len = nums.length;
@@ -60,17 +59,17 @@ public class BinaryTreeUtil {
     }
 
     /**
-     * 递归构建树
+     * 递归构建树（dfs：DLR）
      */
     public static TreeNode createBinaryTreeByDfs(Integer[] nums) {
-        return createBinaryTreeHelper(nums,0);
+        return createBinaryTreeHelper(nums, 0);
     }
 
     /**
      * 递归构建树
      */
     private static TreeNode createBinaryTreeHelper(Integer[] nums, int idx) {
-        if (idx == nums.length - 1) {
+        if (idx >= nums.length) {
             return null;
         }
 
@@ -78,9 +77,12 @@ public class BinaryTreeUtil {
         if (nums[idx] == null) {
             return null;
         }
+
         TreeNode node = new TreeNode(nums[idx]);
-        node.left = createBinaryTreeHelper(nums, idx + 1);
-        node.right = createBinaryTreeHelper(nums, idx + 1);
+        idx++;
+        node.left = createBinaryTreeHelper(nums, idx);
+        idx++;
+        node.right = createBinaryTreeHelper(nums, idx);
 
         // 返回构建的节点
         return node;
@@ -89,21 +91,43 @@ public class BinaryTreeUtil {
 
     /**
      * 基于层序遍历打印节点
+     *
      * @param root
      */
-    public void printTreeByBfs(TreeNode root){
-        // null 处理 todo
+    public void printTreeByBfs(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        List<Integer> res = new ArrayList<>();
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            res.add(node.val);
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+
+        PrintListUtil<Integer> printListUtil = new PrintListUtil<>();
+        printListUtil.print(res);
     }
 
 
     public static void main(String[] args) {
         BinaryTreeUtil binaryTreeUtil = new BinaryTreeUtil();
-        binaryTreeUtil.createBinaryTree(new Integer[]{1, null, 2, 3});
+        TreeNode root1 = binaryTreeUtil.createBinaryTree(new Integer[]{1, null, 2, 3});
+        binaryTreeUtil.printTreeByBfs(root1);
 
         // 递归构建树
-        binaryTreeUtil.createBinaryTreeByDfs(new Integer[]{1, null, 2, 3});
+        TreeNode root2 = binaryTreeUtil.createBinaryTreeByDfs(new Integer[]{1, null, 2, 3});
+        binaryTreeUtil.printTreeByBfs(root2);
 
     }
-
 
 }

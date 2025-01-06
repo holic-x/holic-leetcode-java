@@ -24,8 +24,8 @@ public class MainForTree {
 
         for (Integer[] nums : caseList) {
             // 将元素转化为树
-//            TreeNode root = BinaryTreeUtil.createBinaryTreeByDfs(nums);
-            TreeNode root = BinaryTreeUtil.createBinaryTree(nums);
+            TreeNode root = BinaryTreeUtil.createBinaryTreeByDfs(nums);
+//            TreeNode root = BinaryTreeUtil.createBinaryTree(nums);
 
             // ① 调用算法
             Solution1 solution = new Solution1();
@@ -43,7 +43,21 @@ public class MainForTree {
 
 
     public static void testSolution2(List<Integer[]> caseList) {
+        for (Integer[] nums : caseList) {
+            // 将元素转化为树
+            TreeNode root = BinaryTreeUtil.createBinaryTreeByDfs(nums);
 
+            // ① 调用算法
+            Solution2 solution = new Solution2();
+            List<Integer> res = solution.inorderTraversal(root);
+
+            // ② 打印数据
+            PrintListUtil<Integer> printListUtil = new PrintListUtil<>();
+            printListUtil.print(res);
+
+            System.out.println("********************");
+
+        }
     }
 
 
