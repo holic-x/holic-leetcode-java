@@ -4,19 +4,18 @@ package com.noob.algorithm.leetcode.q114;
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
- * 114.二叉树展开为链表
+ * 🟡 114.二叉树展开为链表 - https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/
  */
 public class Solution1 {
 
-
+    /**
+     * 思路分析：
+     * 1.记录root的左右子树
+     * 2.将左子树left移动到右子树right的位置
+     * 3.然后将原来的右子树right移动到左子树最右边的节点
+     * 4.依次类推，直到左边的节点被全部移过去
+     */
     public void flatten(TreeNode root) {
-        /**
-         * 1.记录root的左右子树
-         * 2.将左子树left移动到右子树right的位置
-         * 3.然后将原来的右子树right移动到左子树最右边的节点
-         * 4.依次类推，直到左边的节点被全部移过去
-         */
-
         // 定义cur记录当前节点位置
         TreeNode cur = root;
         while (cur != null) {
@@ -41,7 +40,6 @@ public class Solution1 {
             cur = cur.right;
         }
     }
-
 
 }
 
