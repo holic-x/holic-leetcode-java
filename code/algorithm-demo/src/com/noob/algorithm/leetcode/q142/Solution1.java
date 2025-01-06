@@ -1,13 +1,17 @@
 package com.noob.algorithm.leetcode.q142;
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 import java.util.HashSet;
 
 /**
- * 142-环形链表II
- * 思路：哈希表  迭代、标记，校验next是否已被标记
+ * 🟡 142-环形链表II - https://leetcode.cn/problems/linked-list-cycle-ii/
  */
 public class Solution1 {
 
+    /**
+     * 思路：哈希表  迭代、标记，校验next是否已被标记
+     */
     public ListNode detectCycle(ListNode head) {
 
         // 定义HashSet存储元素
@@ -24,27 +28,6 @@ public class Solution1 {
             head = head.next;
         }
         return null;
-
     }
 
-}
-
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }
