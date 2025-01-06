@@ -1,23 +1,11 @@
 package com.noob.algorithm.leetcode.q160;
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 /**
- * Definition for singly-linked list.
- * 简单链表节点定义
+ * 🟢 160-相交链表 - https://leetcode.cn/problems/intersection-of-two-linked-lists/
  */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
-/**
- * 160-相交链表
- */
-public class Solution {
+public class Solution1 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode common = null;
         // 判断边界（链表为NULL的情况）
