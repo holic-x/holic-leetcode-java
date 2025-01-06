@@ -78,11 +78,13 @@ public class BinaryTreeUtil {
             return null;
         }
 
+        /**
+         * 数组下标和节点的对照关系：如果父节点在数组中的下标是i，则其左儿子在数组中对应的下标为2*i+1、其右儿子在数组中对应的下标为2*i+2
+         * 如果单纯用i++来切换节点，则在递归过程中会得到不正确的构建树
+         */
         TreeNode node = new TreeNode(nums[idx]);
-        idx++;
-        node.left = createBinaryTreeHelper(nums, idx);
-        idx++;
-        node.right = createBinaryTreeHelper(nums, idx);
+        node.left = createBinaryTreeHelper(nums, 2 * idx + 1);
+        node.right = createBinaryTreeHelper(nums, 2 * idx + 2);
 
         // 返回构建的节点
         return node;
@@ -91,8 +93,6 @@ public class BinaryTreeUtil {
 
     /**
      * 基于层序遍历打印节点
-     *
-     * @param root
      */
     public void printTreeByBfs(TreeNode root) {
         if (root == null) {
@@ -117,7 +117,6 @@ public class BinaryTreeUtil {
         PrintListUtil<Integer> printListUtil = new PrintListUtil<>();
         printListUtil.print(res);
     }
-
 
     public static void main(String[] args) {
         BinaryTreeUtil binaryTreeUtil = new BinaryTreeUtil();

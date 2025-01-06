@@ -1,9 +1,8 @@
-package com.noob.algorithm.base.template.test;
+package com.noob.algorithm.leetcode.q098;
 
 
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 import com.noob.algorithm.base.util.BinaryTreeUtil;
-import com.noob.algorithm.base.util.PrintListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,9 @@ public class MainForTree {
         List<Integer[]> caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
-        caseList.add(new Integer[]{1, null, 2, 3});
+        caseList.add(new Integer[]{1, null, 2, 3}); // true
+        caseList.add(new Integer[]{2, 1, 3}); // true
+        caseList.add(new Integer[]{5, 1, 4, null, null, 3, 6}); // false
 
         return caseList;
     }
@@ -27,10 +28,12 @@ public class MainForTree {
             TreeNode root = BinaryTreeUtil.createBinaryTreeByDfs(nums);
 
             // ① 调用算法
+            Solution1 solution = new Solution1();
+            boolean res = solution.isValidBST(root);
 
             // ② 打印数据
-            PrintListUtil<String> printListUtil = new PrintListUtil<>();
-            // printListUtil.printMatrix(res);
+            System.out.println(res);
+
             System.out.println("********************");
 
         }
