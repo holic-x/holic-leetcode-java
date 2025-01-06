@@ -1,7 +1,7 @@
 package com.noob.algorithm.leetcode.q108;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 import java.util.*;
 

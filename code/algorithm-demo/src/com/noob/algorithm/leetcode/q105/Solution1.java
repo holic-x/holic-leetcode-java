@@ -1,7 +1,6 @@
 package com.noob.algorithm.leetcode.q105;
 
-
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
  * 105.从前序和中序遍历序列中构造二叉树

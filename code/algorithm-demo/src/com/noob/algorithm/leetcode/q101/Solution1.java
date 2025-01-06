@@ -1,7 +1,7 @@
 package com.noob.algorithm.leetcode.q101;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
  * 101.堆成二叉树

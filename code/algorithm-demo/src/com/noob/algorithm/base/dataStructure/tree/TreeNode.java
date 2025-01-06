@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.structure;
+package com.noob.algorithm.base.dataStructure.tree;
 
 // 数据结构定义
 /* 二叉树节点类 */

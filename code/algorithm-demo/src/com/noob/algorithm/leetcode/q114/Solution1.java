@@ -1,7 +1,7 @@
 package com.noob.algorithm.leetcode.q114;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
  * 114.二叉树展开为链表

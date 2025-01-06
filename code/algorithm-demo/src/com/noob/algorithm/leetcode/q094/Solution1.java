@@ -1,7 +1,8 @@
-package com.noob.algorithm.leetcode.q94;
+package com.noob.algorithm.leetcode.q094;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
