@@ -1,9 +1,9 @@
-package com.noob.algorithm.leetcode.q79;
+package com.noob.algorithm.leetcode.q079;
 
 /**
- * 79.单词搜索
+ * 🟡 79.单词搜索 - https://leetcode.cn/problems/word-search/
  */
-public class Solution {
+public class Solution1 {
     public boolean exist(char[][] board, String word) {
         // 调用递推方法实现检索：依次遍历二维数组每个元素
         int m = board.length;
