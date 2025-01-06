@@ -1,10 +1,13 @@
-package com.noob.algorithm.leetcode.q74;
+package com.noob.algorithm.leetcode.q074;
 
 /**
- * 74.搜索二维矩阵检索
- * 思路: 一次二分查找（逐行检索，一行中按照二分查找法进行定位）
+ * 🟡 74.搜索二维矩阵检索 - https://leetcode.cn/problems/search-a-2d-matrix/
  */
 class Solution3 {
+
+    /**
+     * 思路3: 一次二分查找（逐行检索，一行中按照二分查找法进行定位）
+     */
     public boolean searchMatrix(int[][] matrix, int target) {
         for (int i = 0; i < matrix.length; i++) {
             // 校验每行的二分检索结果

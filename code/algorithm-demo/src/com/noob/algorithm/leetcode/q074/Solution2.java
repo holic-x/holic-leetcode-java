@@ -1,10 +1,13 @@
-package com.noob.algorithm.leetcode.q74;
+package com.noob.algorithm.leetcode.q074;
 
 /**
- * 74.搜索二维矩阵检索
- * 思路2：将二维数组坐标转化为一维数组坐标，然后使用二分法
+ * 🟡 74.搜索二维矩阵检索 - https://leetcode.cn/problems/search-a-2d-matrix/
  */
 class Solution2 {
+
+    /**
+     * 思路2：将二维数组坐标转化为一维数组坐标，然后使用二分法
+     */
     public boolean searchMatrix(int[][] matrix, int target) {
 
         int left = 0, right = (matrix.length * matrix[0].length) - 1;
