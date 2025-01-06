@@ -4,13 +4,13 @@ package com.noob.algorithm.leetcode.q101;
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
- * 101.堆成二叉树
+ * 🟢 101.对称二叉树 - https://leetcode.cn/problems/symmetric-tree/
  */
 public class Solution1 {
 
     public boolean isSymmetric(TreeNode root) {
         // p、q的起始节点均从root开始
-        return check(root,root);
+        return check(root, root);
     }
 
     public boolean check(TreeNode p, TreeNode q) {
@@ -28,7 +28,7 @@ public class Solution1 {
 
         /* p、q都不为null，需校验指针对应的节点值，及其子树的值（子树对称可通过递归校验） */
         // if (p != null && q != null) {}
-        return p.val==q.val && check(p.left, q.right) && check(p.right, q.left);
+        return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
     }
 
 }
