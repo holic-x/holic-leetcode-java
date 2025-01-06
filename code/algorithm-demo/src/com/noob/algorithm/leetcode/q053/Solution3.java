@@ -1,11 +1,13 @@
-package com.noob.algorithm.leetcode.q53;
+package com.noob.algorithm.leetcode.q053;
 
 /**
- * 53.最大子数组和
- * 动态规划
+ * 🟡 53.最大子数组和 - https://leetcode.cn/problems/maximum-subarray/description/
  */
-public class Solution2 {
+public class Solution3 {
 
+    /**
+     * dp 动态规划思路：版本优化（空间优化）
+     */
     public int maxSubArray(int[] nums) {
         // 定义结果
         int res = nums[0];
@@ -27,7 +29,7 @@ public class Solution2 {
 
     public static void main(String[] args) {
         int[] nums = {-1};
-        Solution2 solution = new Solution2();
+        Solution3 solution = new Solution3();
         System.out.println(solution.maxSubArray(nums));
     }
 
