@@ -1,16 +1,15 @@
 package com.noob.algorithm.leetcode.q226;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * 226.反转二叉树
+ * 🟢 226.反转二叉树 - https://leetcode.cn/problems/invert-binary-tree/description/
  */
 public class Solution1 {
-
 
     // 层序遍历反转（相当于每次遍历节点的时候就将其左右节点进行交换）
     public TreeNode invertTree(TreeNode root) {

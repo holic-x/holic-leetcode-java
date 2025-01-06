@@ -1,10 +1,12 @@
 package com.noob.algorithm.leetcode.q189;
 
+import com.noob.algorithm.base.util.PrintUtil;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * 189.轮转数组
+ * 🟡 189.轮转数组 - https://leetcode.cn/problems/rotate-array/
  */
 public class Solution1 {
 
@@ -33,6 +35,7 @@ public class Solution1 {
         int k = 3;
         Solution1 solution = new Solution1();
         solution.rotate(nums, k);
+        PrintUtil.print(nums);
     }
 
 }

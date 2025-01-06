@@ -1,7 +1,7 @@
 package com.noob.algorithm.leetcode.q543;
 
 
-import com.noob.algorithm.leetcode.structure.TreeNode;
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
  * 543.二叉树直径

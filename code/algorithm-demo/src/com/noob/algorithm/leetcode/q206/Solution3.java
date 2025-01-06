@@ -1,12 +1,16 @@
 package com.noob.algorithm.leetcode.q206;
 
-import java.util.Stack;
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 
 /**
- * 206.反转链表
- * 思路：迭代
+ * 🟢 206.反转链表 - https://leetcode.cn/problems/reverse-linked-list/
  */
 public class Solution3 {
+
+    /**
+     * 思路：迭代
+     */
     public ListNode reverseList(ListNode head) {
 
         // 记录当前节点和当前节点的上一个节点

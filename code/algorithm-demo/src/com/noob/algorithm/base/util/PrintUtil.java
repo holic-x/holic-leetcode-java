@@ -6,13 +6,17 @@ import java.util.List;
 
 /**
  * 集合相关打印工具类
+ * todo 工具类待完善
  */
 public class PrintUtil {
 
     // 数组打印
     public static void print(int[] dp) {
         for (int i = 0; i < dp.length; i++) {
-            System.out.print("[" + dp[i] + "]" + "-");
+            System.out.print("[" + dp[i] + "]");
+            if (i != dp.length - 1) {
+                System.out.print("-");
+            }
         }
         System.out.println();
     }
@@ -20,9 +24,12 @@ public class PrintUtil {
     // 列表打印
     public static void print(List<String> list) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.print("[" + list.get(i) + "]" + "-");
+            System.out.print("[" + list.get(i) + "]");
+            if (i != list.size() - 1) {
+                System.out.print("-");
+            }
         }
-        System.out.println();
+        System.out.println("end");
     }
 
     // 列表打印

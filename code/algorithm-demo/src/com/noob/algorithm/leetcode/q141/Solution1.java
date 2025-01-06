@@ -1,13 +1,17 @@
 package com.noob.algorithm.leetcode.q141;
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 import java.util.HashSet;
 
 /**
- * 141-环形链表
- * 思路：哈希表  迭代、标记，校验next是否已被标记
+ * 🟢 141-环形链表 - https://leetcode.cn/problems/linked-list-cycle/
  */
 public class Solution1 {
 
+    /**
+     * 思路：哈希表  迭代、标记，校验next是否已被标记
+     */
     public boolean hasCycle(ListNode head) {
 
         // 定义HashSet存储元素
@@ -27,24 +31,4 @@ public class Solution1 {
 
     }
 
-}
-
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }

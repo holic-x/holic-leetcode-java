@@ -1,12 +1,16 @@
 package com.noob.algorithm.leetcode.q141;
 
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 /**
- * 141-环形链表
- * 思路：快慢指针
+ * 🟢 141-环形链表 - https://leetcode.cn/problems/linked-list-cycle/
  */
 public class Solution2 {
 
+    /**
+     * 思路：快慢指针
+     */
     public boolean hasCycle(ListNode head) {
 
         // 定义快慢指针，如果遍历过程中指针相遇则说明存在环
