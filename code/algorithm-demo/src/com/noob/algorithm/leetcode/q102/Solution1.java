@@ -1,7 +1,6 @@
 package com.noob.algorithm.leetcode.q102;
 
 
-
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 import java.util.ArrayList;
@@ -10,10 +9,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 102.二叉树的层次遍历
+ * 🟡 102.二叉树的层次遍历 - https://leetcode.cn/problems/binary-tree-level-order-traversal/
  */
 public class Solution1 {
 
+    /**
+     * 二叉树的层序遍历：借助辅助队列构建处理
+     */
     public List<List<Integer>> levelOrder(TreeNode root) {
         // 定义结果集
         List<List<Integer>> res = new ArrayList<List<Integer>>();
