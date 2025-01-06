@@ -1,9 +1,12 @@
 package com.noob.algorithm.leetcode.q153;
 
 /**
- * 153.寻找旋转排序数组中的最小值
+ * 🟡 153.寻找旋转排序数组中的最小值 - https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/description/
  */
-public class Solution {
+public class Solution1 {
+    /**
+     * 二分法思路：旋转后的排序数组可能会被拆分为两个升序数组，因此需要找到后半部分的第一个元素，可以基于二分法处理
+     */
     public int findMin(int[] nums) {
         int low = 0;
         int high = nums.length - 1;
