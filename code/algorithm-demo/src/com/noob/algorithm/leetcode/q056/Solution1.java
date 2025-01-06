@@ -1,15 +1,14 @@
-package com.noob.algorithm.leetcode.q56;
+package com.noob.algorithm.leetcode.q056;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 /**
  * 56.合并区间
  * 核心：先按照左区间排序，然后循环遍历进行合并确认
  */
-public class Solution {
+public class Solution1 {
 
     public int[][] merge(int[][] intervals) {
 
