@@ -1,13 +1,18 @@
 package com.noob.algorithm.leetcode.q206;
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 import java.util.List;
 import java.util.Stack;
 
 /**
- * 206.反转链表
- * 思路：栈
+ * 🟢 206.反转链表 - https://leetcode.cn/problems/reverse-linked-list/
  */
 public class Solution2 {
+
+    /**
+     * 思路：栈
+     */
     public ListNode reverseList(ListNode head) {
 
         // 定义结果
@@ -25,7 +30,7 @@ public class Solution2 {
         }
 
         // 依次出栈构建新链表
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             cur.next = stack.pop();
             cur = cur.next; // 更新节点
         }
