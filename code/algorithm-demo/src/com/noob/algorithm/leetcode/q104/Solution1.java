@@ -7,12 +7,24 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * 104.二叉树的最大深度
+ * 🟢 104.二叉树的最大深度 - https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/
  */
-public class Solution1
-{
-    // 广度优先遍历思路
-    public int maxDepthBFS(TreeNode root) {
+public class Solution1 {
+
+    // 算法入口
+    public int maxDepth(TreeNode root) {
+        // root null 校验
+        if (root == null) {
+            return 0;
+        }
+
+        return maxDepthBFS(root);
+    }
+
+    /**
+     * 思路：广度优先遍历思路
+     */
+    private int maxDepthBFS(TreeNode root) {
         // 定义节点深度
         int depth = 0;
 
@@ -23,12 +35,12 @@ public class Solution1
         while (!queue.isEmpty()) {
             // 记录当前层的节点个数
             int size = queue.size();
-            while(size>0){
+            while (size > 0) {
                 TreeNode node = queue.poll();
-                if(node.left != null){
+                if (node.left != null) {
                     queue.offer(node.left); // 存入左节点
                 }
-                if(node.right != null){
+                if (node.right != null) {
                     queue.offer(node.right);// 存入右边节点
                 }
                 size--;
@@ -36,20 +48,6 @@ public class Solution1
             depth++;
         }
         return depth;
-    }
-
-
-    // 深度优先遍历思路（递归）
-    public int maxDepthDFS(TreeNode root) {
-        // 递归访问到空节点的时候退出
-        if(root == null) {
-            return 0;
-        }else{
-            // 分别计算左右子树的深度
-            int leftDepth = maxDepthDFS(root.left);
-            int rightDepth = maxDepthDFS(root.right);
-            return Math.max(leftDepth, rightDepth) + 1;
-        }
     }
 
 }
