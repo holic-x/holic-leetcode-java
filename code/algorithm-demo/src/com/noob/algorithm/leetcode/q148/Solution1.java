@@ -1,15 +1,19 @@
 package com.noob.algorithm.leetcode.q148;
 
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 
 /**
- * 148-单链表排序
- * 思路1：暴力法（遍历链表节点、排序、根据排序结果回写）
+ * 🟡 148-单链表排序 - https://leetcode.cn/problems/sort-list/
  */
 public class Solution1 {
 
+    /**
+     * 思路1：暴力法（遍历链表节点、排序、根据排序结果回写）
+     */
     public ListNode sortList(ListNode head) {
         // 定义结果
         ListNode res = new ListNode(0);
@@ -40,24 +44,4 @@ public class Solution1 {
         return res.next;
     }
 
-}
-
-
-/**
- * 链表节点定义
- */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }
