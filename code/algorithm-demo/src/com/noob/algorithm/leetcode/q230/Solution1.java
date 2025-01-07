@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 🟡 230.二叉搜索树中第K小的元素
- * https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/
+ * 🟡 230.二叉搜索树中第K小的元素 - https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/
  */
 public class Solution1 {
 

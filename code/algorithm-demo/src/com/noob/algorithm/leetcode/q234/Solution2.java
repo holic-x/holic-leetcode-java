@@ -2,40 +2,40 @@ package com.noob.algorithm.leetcode.q234;
 
 import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
  * 🟢 234.回文链表 - https://leetcode.cn/problems/palindrome-linked-list/description/
  */
-public class Solution1 {
+public class Solution2 {
 
     /**
-     * 思路：栈 (将链表转化为集合进行校验)
+     * 思路：转化为集合元素存储（双指针校验）
      */
     public boolean isPalindrome(ListNode head) {
 
         // 指定stack存储类型
-        Stack<Integer> stack = new Stack<>();
+        List<Integer> list = new ArrayList<>();
 
         // 记录链表节点指针
         ListNode cur = head;
 
-        // 依次入栈
+        // 依次加入集合
         while (cur != null) {
-            stack.push(cur.val);
+            list.add(cur.val);
             cur = cur.next;
         }
 
-        // 遍历链表，和出栈元素依次进行比较，如果出现不一致则认为非回文
-        while (head != null) {
-            if (head.val != stack.pop()) {
+        // 双指针校验回文
+        for (int left = 0, right = list.size() - 1; left < right; left++, right--) {
+            if (list.get(left) != list.get(right)) {
                 return false;
             }
-            // 继续指向下一个
-            head = head.next;
         }
 
-        // 返回
+        // 校验通过，返回true
         return true;
     }
 
