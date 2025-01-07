@@ -1,6 +1,8 @@
-package com.noob.algorithm.leetcode.q279;
+package com.noob.algorithm.leetcode.q283;
 
 
+import com.noob.algorithm.base.util.PrintListUtil;
+import com.noob.algorithm.base.util.PrintUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,25 +10,26 @@ import java.util.List;
 public class Main {
 
     // 初始化测试用例
-    public static List<Integer> initCase() {
-        List<Integer> caseList = new ArrayList<>();
+    public static List<int[]> initCase() {
+        List<int[]> caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
-        caseList.add(12);
-        caseList.add(13);
+        caseList.add(new int[]{0, 1, 0, 3, 12}); // [1]-[3]-[12]-[0]-[0]
+        caseList.add(new int[]{0}); // [0]
 
         return caseList;
     }
 
-    public static void testSolution1(List<Integer> caseList) {
+    public static void testSolution1(List<int[]> caseList) {
 
-        for (int n : caseList) {
+        for (int[] nums : caseList) {
             // ① 调用算法
             Solution1 solution = new Solution1();
-            int res = solution.numSquares(n);
+            solution.moveZeroes(nums);
+
 
             // ② 打印数据
-            System.out.println(res);
+            PrintUtil.print(nums);
 
             // 分隔符
             System.out.println("********************");
@@ -36,7 +39,7 @@ public class Main {
     }
 
 
-    public static void testSolution2(List<Integer> caseList) {
+    public static void testSolution2(List<int[]> caseList) {
 
     }
 
@@ -44,7 +47,7 @@ public class Main {
     public static void main(String[] args) {
 
         // 参数初始化
-        List<Integer> caseList = initCase();
+        List<int[]> caseList = initCase();
 
         System.out.println("---------- 算法①调用测试 ----------");
 
