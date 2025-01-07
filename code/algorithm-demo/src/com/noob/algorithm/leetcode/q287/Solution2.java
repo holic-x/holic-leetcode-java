@@ -7,9 +7,7 @@ package com.noob.algorithm.leetcode.q287;
  */
 public class Solution2 {
 
-
     public int testNums(int[] nums) {
-
         // point 指针理解
         int point = 0;
         while(true){
@@ -18,14 +16,7 @@ public class Solution2 {
         }
     }
 
-    public static void main(String[] args) {
-        int[] nums = {1,3,4,2};
-        Solution2 solution = new Solution2();
-        System.out.println(solution.testNums(nums));
-    }
-
-
-    public int findDuplicate(int[] nums) {
+    public int findDuplicate2(int[] nums) {
 
         // 定义快、慢指针
         int slow = 0,fast = 0;
