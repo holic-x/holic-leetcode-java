@@ -1,10 +1,12 @@
 package com.noob.algorithm.leetcode.q238;
 
 /**
- * 238.除自身以外数组的乘积
- * 思路：左右乘积（进阶）
+ * 🟡 238.除自身以外数组的乘积 - https://leetcode.cn/problems/product-of-array-except-self/
  */
 public class Solution3 {
+    /**
+     * 思路：左右乘积（进阶）
+     */
     public int[] productExceptSelf(int[] nums) {
         // 定义结果
         int[] res = new int[nums.length];
@@ -25,7 +27,7 @@ public class Solution3 {
 
         // 填充右侧乘积（右侧乘积是从尾部开始遍历）
         int right = 1; // 定义右侧的累乘值
-        for(int i=nums.length-1; i>=0; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             // 进行结果累乘
             res[i] *= right;
             // 更新right
@@ -37,7 +39,7 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4};
+        int[] nums = {1, 2, 3, 4};
         Solution3 solution = new Solution3();
         System.out.println(solution.productExceptSelf(nums));
     }

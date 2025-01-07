@@ -1,10 +1,13 @@
 package com.noob.algorithm.leetcode.q238;
 
 /**
- * 238.除自身以外数组的乘积
- * 思路：左右乘积
+ * 🟡 238.除自身以外数组的乘积 - https://leetcode.cn/problems/product-of-array-except-self/
  */
 public class Solution2 {
+
+    /**
+     * 思路：左右乘积
+     */
     public int[] productExceptSelf(int[] nums) {
         // 定义变量存放数组长度
         int n = nums.length;
