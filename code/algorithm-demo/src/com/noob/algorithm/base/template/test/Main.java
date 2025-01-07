@@ -8,9 +8,12 @@ import java.util.List;
 
 public class Main {
 
+    static List<int[]> caseList = new ArrayList<>();
+
     // 初始化测试用例
     public static List<int[]> initCase() {
-        List<int[]> caseList = new ArrayList<>();
+        // 初始化测试用例集合
+        caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
         caseList.add(new int[]{1, 2, 3});
@@ -20,7 +23,7 @@ public class Main {
 
     public static void testSolution1() {
         // 参数初始化
-        List<int[]> caseList = initCase();
+        initCase();
 
         for (int[] nums : caseList) {
             // ① 调用算法

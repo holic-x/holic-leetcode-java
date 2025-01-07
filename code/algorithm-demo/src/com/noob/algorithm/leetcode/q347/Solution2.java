@@ -3,7 +3,7 @@ package com.noob.algorithm.leetcode.q347;
 import java.util.*;
 
 /**
- * 347.前K个高频元素
+ * 🟡 347.前K个高频元素 - https://leetcode.cn/problems/top-k-frequent-elements/
  */
 public class Solution2 {
 
@@ -41,10 +41,4 @@ public class Solution2 {
         return res;
     }
 
-    public static void main(String[] args) {
-        int[] nums = {1,1,1,2,2,3};
-        Solution2 solution = new Solution2();
-        int[] res = solution.topKFrequent(nums, 2);
-        System.out.println(Arrays.toString(res));
-    }
 }

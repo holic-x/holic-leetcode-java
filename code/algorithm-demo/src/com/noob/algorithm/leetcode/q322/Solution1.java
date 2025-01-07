@@ -1,9 +1,9 @@
 package com.noob.algorithm.leetcode.q322;
 
 /**
- * 322.零钱兑换
+ * 🟡 322.零钱兑换 - https://leetcode.cn/problems/coin-change/description/
  */
-public class Solution {
+public class Solution1 {
 
     // 转化为相应的完全背包问题：amount为背包容量，coins为物品重量（不限定物品个数），求如何使用最少数量的物品装满背包
     public int coinChange(int[] coins, int amount) {

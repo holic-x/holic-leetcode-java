@@ -1,7 +1,8 @@
-package com.noob.algorithm.base.template.test;
+package com.noob.algorithm.leetcode.q347;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainForMultiParam {
@@ -20,10 +21,12 @@ public class MainForMultiParam {
         // todo 补充测试用例集合
 
         // 参数1
-        param1List.add(new int[]{1, 2, 3});
+        param1List.add(new int[]{1, 1, 1, 2, 2, 3});
+        param1List.add(new int[]{1});
 
         // 参数2
-        param2List.add(0);
+        param2List.add(2);
+        param2List.add(1);
 
         // other param
 
@@ -40,25 +43,39 @@ public class MainForMultiParam {
 
         for (int i = 0; i < param1List.size(); i++) {
             // ① 调用算法
+            Solution1 solution = new Solution1();
+            int[] res = solution.topKFrequent(param1List.get(i), param2List.get(i));
 
-            // ② 输出结果
+            // ② 输出
+            System.out.println(Arrays.toString(res));
 
             // 分隔符
             System.out.println("********************");
-
         }
 
     }
 
 
     public static void testSolution2() {
+        // 初始化用例
+        initCase();
 
+        for (int i = 0; i < param1List.size(); i++) {
+            // ① 调用算法
+            Solution2 solution = new Solution2();
+            int[] res = solution.topKFrequent(param1List.get(i), param2List.get(i));
+
+            // ② 输出
+            System.out.println(Arrays.toString(res));
+
+            // 分隔符
+            System.out.println("********************");
+        }
     }
 
 
     public static void main(String[] args) {
 
-        // ---------- 测试算法 ----------
         System.out.println("---------- 算法①调用测试 ----------");
 
         testSolution1();
