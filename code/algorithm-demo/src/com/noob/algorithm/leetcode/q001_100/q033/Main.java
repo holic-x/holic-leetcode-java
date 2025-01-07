@@ -46,7 +46,11 @@ public class Main {
 
 
     public static void testSolution2(List<int[]> param1List, List<Integer> param2List) {
-
+        Solution2 solution = new Solution2();
+        for (int i = 0; i < param1List.size(); i++) {
+            int res = solution.search(param1List.get(i), param2List.get(i));
+            System.out.println(res);
+        }
     }
 
 

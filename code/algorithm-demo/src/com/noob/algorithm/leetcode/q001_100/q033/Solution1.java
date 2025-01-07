@@ -6,6 +6,10 @@ import java.util.Arrays;
  * 🟡 033.搜索旋转排序数组 - https://leetcode.cn/problems/search-in-rotated-sorted-array/description/
  */
 public class Solution1 {
+
+    /**
+     * 思路：寻转旋转基点 + 二分检索
+     */
     public int search(int[] nums, int target) {
         // 区分有无旋转两种情况，通过判断nums是否完全升序来界定
         int validOrderRes = validOrder(nums);
