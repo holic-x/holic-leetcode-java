@@ -3,7 +3,7 @@ package com.noob.algorithm.leetcode.q279;
 /**
  * 279.动态规划
  */
-public class Solution {
+public class Solution1 {
     // 转化为完全背包问题：n为背包，完全平方数即为物品（可重复使用），将题意转化为用最少的物品数量凑满背包
     public int numSquares(int n) {
         // 1.定义动态数组(dp[k]表示和为k的完全平方数的最少数量)
@@ -39,8 +39,4 @@ public class Solution {
         return dp[n];
     }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.numSquares(12));
-    }
 }

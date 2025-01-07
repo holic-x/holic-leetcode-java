@@ -3,7 +3,6 @@ package com.noob.algorithm.leetcode.q148;
 
 import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 import com.noob.algorithm.base.util.LinkedListUtil;
-import com.noob.algorithm.leetcode.q279.Solution;
 
 import java.util.ArrayList;
 import java.util.List;
