@@ -4,7 +4,7 @@ package com.noob.algorithm.leetcode.q401_500.q543;
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
- * 543.二叉树直径
+ * 🟢 543.二叉树直径 - https://leetcode.cn/problems/diameter-of-binary-tree/description/
  */
 public class Solution1 {
 
@@ -30,7 +30,5 @@ public class Solution1 {
         // 返回最大深度
         return Math.max(leftDepth, rightDepth) + 1;
     }
-
-
 
 }
