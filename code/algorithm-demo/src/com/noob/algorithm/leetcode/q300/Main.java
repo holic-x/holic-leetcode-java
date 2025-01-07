@@ -1,7 +1,5 @@
-package com.noob.algorithm.base.template.test;
+package com.noob.algorithm.leetcode.q300;
 
-
-import com.noob.algorithm.base.util.PrintListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +11,9 @@ public class Main {
         List<int[]> caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
-        caseList.add(new int[]{1, 2, 3});
+        caseList.add(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+        caseList.add(new int[]{0, 1, 0, 3, 2, 3});
+        caseList.add(new int[]{7, 7, 7, 7, 7, 7, 7});
 
         return caseList;
     }
@@ -24,17 +24,16 @@ public class Main {
 
         for (int[] nums : caseList) {
             // ① 调用算法
+            Solution1 solution = new Solution1();
+            int res = solution.lengthOfLIS(nums);
 
             // ② 打印数据
-            PrintListUtil<String> printListUtil = new PrintListUtil<>();
-            // printListUtil.printMatrix(res);
-
+            System.out.println(res);
 
             // 分隔符
             System.out.println("********************");
 
         }
-
     }
 
 

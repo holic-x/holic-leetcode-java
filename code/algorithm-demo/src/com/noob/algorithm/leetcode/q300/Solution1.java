@@ -3,9 +3,9 @@ package com.noob.algorithm.leetcode.q300;
 import java.util.Arrays;
 
 /**
- * 300.最长子序列
+ * 🟡 300.最长子序列 - https://leetcode.cn/problems/longest-increasing-subsequence/description/
  */
-public class Solution {
+public class Solution1 {
 
     public int lengthOfLIS(int[] nums) {
         // 1.确定dp（dp[i]表示以nums[i]元素结尾的最长子序列长度）
