@@ -38,7 +38,21 @@ public class Main {
 
 
     public static void testSolution2() {
+        // 参数初始化
+        List<int[]> caseList = initCase();
 
+        for (int[] nums : caseList) {
+            // ① 调用算法
+            Solution2 solution = new Solution2();
+            int res = solution.lengthOfLIS(nums);
+
+            // ② 打印数据
+            System.out.println(res);
+
+            // 分隔符
+            System.out.println("********************");
+
+        }
     }
 
 
