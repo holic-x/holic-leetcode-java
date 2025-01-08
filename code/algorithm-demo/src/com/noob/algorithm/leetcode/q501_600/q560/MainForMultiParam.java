@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q401_500.q560;
+package com.noob.algorithm.leetcode.q501_600.q560;
 
 
 import java.util.ArrayList;

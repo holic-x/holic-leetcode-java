@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q401_500.q543;
+package com.noob.algorithm.leetcode.q501_600.q543;
 
 
 import com.noob.algorithm.base.dataStructure.tree.TreeNode;
