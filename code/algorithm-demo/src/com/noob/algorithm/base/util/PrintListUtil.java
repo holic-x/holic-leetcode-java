@@ -11,7 +11,10 @@ public class PrintListUtil<T> {
     // 单个列表打印
     public void print(List<T> list) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.print("[" + list.get(i) + "]" + "-");
+            System.out.print("[" + list.get(i) + "]");
+            if (i != list.size() - 1) {
+                System.out.print("-");
+            }
         }
         System.out.println();
     }

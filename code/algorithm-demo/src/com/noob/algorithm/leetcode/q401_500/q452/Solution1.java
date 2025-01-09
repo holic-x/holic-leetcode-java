@@ -26,10 +26,10 @@ public class Solution1 {
         int cnt = 1; // 初始化射击1次
         // 遍历区间，校验当前选择射击点是否覆盖了该区间，如果覆盖则跳过，如果没有覆盖则需再次选择新的射击点
         for (int i = 1; i < points.length; i++) {
-            if (shotIdx >= points[i][0]) {
+            if (shotIdx >= points[i][0]) { // 基于前面的排序，shotIdx<=right是成立的所以此处可以不用校验shotIdx<=points[i][1](shotIdx >= points[i][0] && shotIdx<=points[i][1])
                 continue; // 已覆盖，继续下一个射击区域判断
             } else {
-                // 选择当前区间的右端点作为新的射击点
+                // 选择当前区间的右端点作为新的射击点(shotIdx<left,当前射击点无法无法这个区间)
                 shotIdx = points[i][1];
                 cnt++;
             }
