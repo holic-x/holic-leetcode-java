@@ -44,6 +44,43 @@ public class MainForLinkedList {
 
     public static void testSolution2(List<int[]> caseList) {
 
+        for (int[] nums : caseList) {
+            // 基于数组元素构建链表
+            ListNode head = LinkedListUtil.createLink(nums);
+
+            // ① 调用算法
+            Solution2 solution = new Solution2();
+            ListNode res = solution.sortList(head);
+
+            // ② 打印数据
+            LinkedListUtil.printLink(res);
+
+            // 分隔符
+            System.out.println("********************");
+
+        }
+
+    }
+
+
+    public static void testSolution3(List<int[]> caseList) {
+
+        for (int[] nums : caseList) {
+            // 基于数组元素构建链表
+            ListNode head = LinkedListUtil.createLink(nums);
+
+            // ① 调用算法
+            Solution3 solution = new Solution3();
+            ListNode res = solution.sortList(head);
+
+            // ② 打印数据
+            LinkedListUtil.printLink(res);
+
+            // 分隔符
+            System.out.println("********************");
+
+        }
+
     }
 
 
@@ -59,6 +96,10 @@ public class MainForLinkedList {
         System.out.println("---------- 算法②调用测试 ----------");
 
         testSolution2(caseList);
+
+        System.out.println("---------- 算法③调用测试 ----------");
+
+        testSolution3(caseList);
 
     }
 }
