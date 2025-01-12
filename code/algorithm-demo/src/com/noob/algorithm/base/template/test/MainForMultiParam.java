@@ -13,6 +13,10 @@ public class MainForMultiParam {
 
     // 初始化测试用例
     public static void initCase() {
+        // 初始化测试用例集合
+        param1List = new ArrayList<>();
+        param2List = new ArrayList<>();
+
         // todo 补充测试用例集合
 
         // 参数1
@@ -30,32 +34,38 @@ public class MainForMultiParam {
         }
     }
 
-    public static void testSolution1(List<int[]> param1List, List<Integer> param2List) {
+    public static void testSolution1() {
+        // 初始化用例
+        initCase();
 
         for (int i = 0; i < param1List.size(); i++) {
+            // ① 调用算法
+
+            // ② 输出结果
+
+            // 分隔符
+            System.out.println("********************");
 
         }
 
     }
 
 
-    public static void testSolution2(List<int[]> param1List, List<Integer> param2List) {
+    public static void testSolution2() {
 
     }
 
 
     public static void main(String[] args) {
 
-        // ---------- 初始化测试用例 ----------
-        initCase();
-
-
         // ---------- 测试算法 ----------
-        testSolution1(param1List, param2List);
+        System.out.println("---------- 算法①调用测试 ----------");
 
-        System.out.println("-------------------------------");
+        testSolution1();
 
-        testSolution2(param1List, param2List);
+        System.out.println("---------- 算法②调用测试 ----------");
+
+        testSolution2();
 
     }
 }

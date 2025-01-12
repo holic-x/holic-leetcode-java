@@ -8,9 +8,12 @@ import java.util.List;
 
 public class Main {
 
+    static List<int[]> caseList = new ArrayList<>();
+
     // 初始化测试用例
     public static List<int[]> initCase() {
-        List<int[]> caseList = new ArrayList<>();
+        // 初始化测试用例集合
+        caseList = new ArrayList<>();
 
         // todo 补充测试用例集合
         caseList.add(new int[]{1, 2, 3});
@@ -18,11 +21,12 @@ public class Main {
         return caseList;
     }
 
-    public static void testSolution1(List<int[]> caseList) {
+    public static void testSolution1() {
+        // 参数初始化
+        initCase();
 
         for (int[] nums : caseList) {
             // ① 调用算法
-
 
             // ② 打印数据
             PrintListUtil<String> printListUtil = new PrintListUtil<>();
@@ -37,23 +41,20 @@ public class Main {
     }
 
 
-    public static void testSolution2(List<int[]> caseList) {
+    public static void testSolution2() {
 
     }
 
 
     public static void main(String[] args) {
 
-        // 参数初始化
-        List<int[]> caseList = initCase();
-
         System.out.println("---------- 算法①调用测试 ----------");
 
-        testSolution1(caseList);
+        testSolution1();
 
         System.out.println("---------- 算法②调用测试 ----------");
 
-        testSolution2(caseList);
+        testSolution2();
 
     }
 }
