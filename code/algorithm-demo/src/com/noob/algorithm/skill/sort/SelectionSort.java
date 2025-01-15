@@ -1,5 +1,8 @@
 package com.noob.algorithm.skill.sort;
 
+/**
+ * 选择排序
+ */
 public class SelectionSort {
 
     /**
