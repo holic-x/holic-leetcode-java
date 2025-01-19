@@ -25,9 +25,9 @@ public class Solution1 {
         int leftDepth = depth(node.left);
         // 计算右子树深度
         int rightDepth = depth(node.right);
-        // 更新最大值
+        // 更新最大值(经过当前的最长直径即为左、右子树的深度，在递归求左右子树的深度的同时更新最大执行)
         diameter = Math.max(diameter, leftDepth + rightDepth);
-        // 返回最大深度
+        // 返回子树深度
         return Math.max(leftDepth, rightDepth) + 1;
     }
 
