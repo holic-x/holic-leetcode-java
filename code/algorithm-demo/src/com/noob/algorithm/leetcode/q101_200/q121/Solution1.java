@@ -20,5 +20,4 @@ public class Solution1 {
         return maxProfit;
     }
 
-
 }
