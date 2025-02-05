@@ -1,4 +1,4 @@
-package com.noob.algorithm.leetcode.q601_q700;
+package com.noob.algorithm.leetcode.q601_q700.q674;
 
 import java.util.Arrays;
 
