@@ -43,12 +43,4 @@ public class Solution1 {
         // 返回结果
         return ans;
     }
-
-    public static void main(String[] args) {
-        int[] nums1 = new int[]{4, 1, 2};
-        int[] nums2 = new int[]{1, 3, 4, 2};
-        Solution496_02 solution = new Solution496_02();
-        solution.nextGreaterElement(nums1, nums2);
-    }
-
 }
