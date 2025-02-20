@@ -1,8 +1,6 @@
 package com.noob.algorithm.skill.sort;
 
-import com.noob.algorithm.base.util.PrintListUtil;
 import com.noob.algorithm.base.util.PrintUtil;
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
 
 import java.util.ArrayList;
 import java.util.List;
