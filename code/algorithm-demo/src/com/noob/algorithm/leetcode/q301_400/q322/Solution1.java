@@ -30,7 +30,7 @@ public class Solution1 {
             }
         }
 
-        // 结果返回（返回dp[k],但并不是每个k都能凑，因此如果）
+        // 结果返回（返回dp[k],但并不是每个k都能凑，因此如果超出amount则认为是不可凑）
         // return dp[amount];
         return dp[amount] > amount ? -1 : dp[amount]; // 此处根据测试用例返回结果，正常直接返回对应元素，此处如果凑不满则设为-1
 
