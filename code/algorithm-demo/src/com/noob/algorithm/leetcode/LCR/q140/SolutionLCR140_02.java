@@ -1,6 +1,7 @@
 package com.noob.algorithm.leetcode.LCR.q140;
 
-import com.noob.algorithm.plan_archive.baseStructure.ListNode;
+
+import com.noob.algorithm.base.dataStructure.linkedList.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
