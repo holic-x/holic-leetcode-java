@@ -83,7 +83,7 @@
 - ②`common 150`：四舍五入二刷核心题型（部分题型是基于`hot 100`的），补充一些扩展题目，还是按照模块刷题并梳理题解
   - 基于`hot 100`的基础，本轮刷题相对没有初刷那么大压力，但是很多已经刷过的题型可能还是一知半解（有个大致印象，但是还是需要题解辅助或者一些代码细节考虑不清楚，此时阶段①梳理的题解就起到很大作用），可以试着根据梳理的题解关键字去回忆，在这个过程中查缺补漏
   - 核心：**补充**（试着独立完成，如果概念模糊则基于核心题解去辅助，此时不要看代码，而是根据核心题解关键字尝试去回忆解题思路，并在这个过程中补充题解）
-- ③`代码随想录` && **随机刷题**
+- ③`代码随想录` && **随机刷题模式**
   - 模块化刷题：理解模块题型、梳理各个模块的解题技巧，分门别类，巩固体系化解题思路
     - 基于"解题模板"的概念进行重刷，从基础开始重构解题思路，这个过程中会发现打开新世界大门，会对前面的刷题过程中遇到的问题有着新的理解和概括，在这个过程中继续查缺补漏，巩固刷题技巧。对于一些连续的题型，需要结合"模板"分情况讨论
   - 核心：**体系化**，按照各个模块的题型，重新理解数据结构基础和解题模板核心
@@ -100,3 +100,27 @@
 - [holic-leetcode-java](https://github.com/holic-x/holic-leetcode-java)（题析版本梳理）
 
 - [noob-demo/KeepJava](https://github.com/holic-x/noob-demo/tree/master/rebirth/base/KeepJava)（日常刷题记录）
+
+
+
+
+
+> 附学习资源参考
+
+[代码随想录](https://www.programmercarl.com/)
+
+[灵神题库 (GitHub)]([codeforces-go/leetcode/SOLUTIONS.md at master · EndlessCheng/codeforces-go](https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md) )
+
+[灵神刷题指引 (LeetCode)](https://leetcode.cn/discuss/post/3141566/ru-he-ke-xue-shua-ti-by-endlesscheng-q3yd/)
+
+[ACWing](https://www.acwing.com/) 
+
+[卡码网](https://kamacoder.com/)
+
+[CodeFun2000](https://codefun2000.com/)
+
+LeetCode 题单： [LeetCode Hot 100](https://leetcode.cn/studyplan/top-100-liked/)、[LeetCode 面试经典 150](https://leetcode.cn/studyplan/top-interview-150/)
+
+[CodeTop 150](https://codetop.cc/home)
+
+[牛客网](https://www.nowcoder.com/)
