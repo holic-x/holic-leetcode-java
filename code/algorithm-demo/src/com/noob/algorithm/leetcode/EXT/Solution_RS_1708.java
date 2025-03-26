@@ -1,4 +1,4 @@
-package com.noob.algorithm.daily.codeTop;
+package com.noob.algorithm.leetcode.EXT;
 
 import java.util.Arrays;
 import java.util.Comparator;
