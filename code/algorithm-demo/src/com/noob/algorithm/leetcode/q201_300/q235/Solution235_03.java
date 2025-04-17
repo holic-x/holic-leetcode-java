@@ -1,6 +1,7 @@
 package com.noob.algorithm.leetcode.q201_300.q235;
 
-import com.noob.algorithm.plan_archive.baseStructure.TreeNode;
+
+import com.noob.algorithm.base.dataStructure.tree.TreeNode;
 
 /**
  * 🟡 235 二叉搜索树的最近公共祖先 - https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
