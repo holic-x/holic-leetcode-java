@@ -17,7 +17,6 @@ public class Solution1 {
          * 由于并不知道哪些括号包含其他括号，因此每次去除都直接覆盖所有情况，去掉成对的括号，然后校验剩余的括号是否可以组成成对的括号进行移除
          * 以此类推
           */
-
         while(s.contains("[]")||s.contains("{}")||s.contains("()")){
             s = s.replace("[]","");
             s = s.replace("{}","");
